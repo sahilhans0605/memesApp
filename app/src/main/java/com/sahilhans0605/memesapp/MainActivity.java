@@ -1,11 +1,12 @@
 package com.sahilhans0605.memesapp;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.MediaPlayer;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public void generateNewMeme(){
         DownloadMeme content = new DownloadMeme();
         try {
-            String result=content.execute("https://meme-api.herokuapp.com/gimme").get();
+            String result= null;
+            result = content.execute("https://meme-api.com/gimme").get();
             Log.i("Entered", result);
             try {
                 String crappyPrefix = "null";

@@ -24,7 +24,7 @@
         android:layout_height="119dp"
         android:padding="20dp"
         android:text="New Meme"
-android:textStyle="bold"
+        android:textStyle="bold"
         android:textSize="30sp"
         android:onClick="nextMeme"
         app:layout_constraintBottom_toBottomOf="parent"
